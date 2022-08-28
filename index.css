@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: gray;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: lightgrey;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disappear {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.container {
+    z-index: -1000000;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container>h1 {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    margin: 30px;
+    margin-bottom: 40px;
+    font-size: 46px;
+    color: white;
+}
+
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    width: 440px;
+    height: 150px;
+    border: none;
+    color: rgb(43, 35, 35);
+    font-size: 40px;
+    background-color: rgb(192, 192, 192);
+    padding: 10px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    border-radius: 100%;
+    width: 100px;
+    margin: 7px;
+    padding: 30px;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+.submit button {
+    margin: auto;
+    text-align: center;
+    width: 480px;
+    padding: 5px 0;
+    margin-top: 20px;
+    font-size: 45px;
+    background-color: blue;
+    opacity: 0.4;
+    color: white;
+}
+
+.submit button:active {
+    background-color: blue;
+    opacity: 0.8;
+}
+
+.btn button:active {
+    background-color: rgb(197, 217, 235);
+}
+
+.calc {
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    background-color: rgb(192, 192, 192);
+}
+
+h2 {
+    position: relative;
+    top: -50px;
+    left: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    background-color: none;
+    color: white;
+    float: right;
+}
+
+/* For Responsive Webpage */
+
+@media screen and (min-width:450px) {
+    .submit button {
+        display: block;
+        width: 480px;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .btn button {
+        margin: 6px;
+        width: 60px;
+        align-self: center;
+        padding: 42px;
+        height: 60px;
+    }
+    .container {
+        margin: auto;
+        width: 600px;
+    }
+    textarea {
+        width: 410px;
+    }
+}
